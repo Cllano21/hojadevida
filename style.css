@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 .contenedor0 img {
-  width: 40%; /* Ajuste para imágenes */
+  width: 20%; /* Ajuste para imágenes */
   height: auto;
   margin-bottom: 1px; /* Espacio entre la imagen y el texto */
   border-radius: 8px;
@@ -177,4 +177,18 @@ footer {
   padding: 10px; /* Espaciado alrededor */
   box-sizing: border-box;
   margin-bottom: 5px; 
+}
+
+.contenedor2 .parrafo21,
+.contenedor2 .parrafo22 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+}
+
+.contenedor2 h3,
+.contenedor2 p {
+  color: rgb(60, 27, 146);
+  font-size: 20px; /* Ajuste del tamaño de la fuente */
+  width: 100%;
+  margin: 5px 0; /* Espaciado vertical */
 }
