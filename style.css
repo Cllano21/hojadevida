@@ -1,7 +1,11 @@
+body{
+  font-family: sans-serif;
+}
 a { 
   text-decoration: none;
   color: white;
   font-weight: 400;
+  font-family: sans-serif;
   padding-right: 0;
 }
 a:hover {
@@ -12,7 +16,7 @@ header {
   display: flex;
   height: auto;
   width: 100%;
-  background-color: rgb(35, 185, 249);
+  background-color: rgb(24, 141, 190);
   justify-content: space-between;
   align-items: center;
   padding: 10px; /* Ajuste de padding */
@@ -61,6 +65,7 @@ nav a:hover {
     padding: 10px; /* Espacio adicional */
   }
 }
+
 .contenedor0 {
   background-color: rgb(147, 165, 200);
   display: flex;
@@ -78,7 +83,11 @@ nav a:hover {
   margin-bottom: 1px; /* Espacio entre la imagen y el texto */
   border-radius: 8px;
 }
-
+.contenedor0 h2 {
+  color: rgb(60, 27, 146);
+  margin: 5px 0;
+  font-size: 26px; /* Ajuste del tamaño de la fuente */
+}
 .contenedor {
   background-color: rgb(147, 165, 200);
   display: flex;
@@ -105,13 +114,17 @@ nav a:hover {
 .contenedor h2 {
   color: rgb(255, 255, 255);
   margin: 5px 0;
-  font-size: 28px; /* Ajuste del tamaño de la fuente */
+  font-size: 20px; /* Ajuste del tamaño de la fuente */
 }
-.contenedor h3,
+.contenedor h3{
+  color: rgb(60, 27, 146);
+  margin: 5px 0;
+  font-size: 18px; /* Ajuste del tamaño de la fuente */
+}
 .contenedor p {
   color: rgb(60, 27, 146);
   margin: 5px 0;
-  font-size: 20px; /* Ajuste del tamaño de la fuente */
+  font-size: 16px; /* Ajuste del tamaño de la fuente */
 }
 
 footer {
@@ -128,11 +141,11 @@ footer {
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 500px) {
   .contenedor0 h2 {
-    font-size: 20px; /* Disminuir el tamaño de la fuente en móvil */
+    font-size: 18px; /* Disminuir el tamaño de la fuente en móvil */
   }
   .contenedor p,
   .contenedor ul {
-    font-size: 14px; /* Disminuir el tamaño de la fuente en móvil */
+    font-size: 16px; /* Disminuir el tamaño de la fuente en móvil */
   }
 }
 
@@ -152,20 +165,25 @@ footer {
   text-align: left;
 }
 
-.contenedor1 h3,
+.contenedor1 h3 {
+  color: rgb(60, 27, 146);
+  font-size: 18p x; /* Ajuste del tamaño de la fuente */
+  width: 100%;
+  margin: 5px 0; /* Espaciado vertical */
+}
 .contenedor1 p {
   color: rgb(60, 27, 146);
-  font-size: 20px; /* Ajuste del tamaño de la fuente */
+  font-size: 16px; /* Ajuste del tamaño de la fuente */
   width: 100%;
   margin: 5px 0; /* Espaciado vertical */
 }
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 500px) {
   .contenedor1 h3 {
-    font-size: 20px; /* Disminuir el tamaño de la fuente en móvil */
+    font-size: 18px; /* Disminuir el tamaño de la fuente en móvil */
   }
   .contenedor1 p {
-    font-size: 14px; /* Disminuir el tamaño de la fuente en móvil */
+    font-size: 16px; /* Disminuir el tamaño de la fuente en móvil */
   }
 }
 .contenedor2 {
@@ -188,7 +206,14 @@ footer {
 .contenedor2 h3,
 .contenedor2 p {
   color: rgb(60, 27, 146);
-  font-size: 20px; /* Ajuste del tamaño de la fuente */
+  font-size: 16px; /* Ajuste del tamaño de la fuente */
   width: 100%;
   margin: 5px 0; /* Espaciado vertical */
 }
+@media (max-width: 500px) {
+  .contenedor2 h3 {
+    font-size: 18px; /* Disminuir el tamaño de la fuente en móvil */
+  }
+  .contenedor2 p {
+    font-size: 16px; /* Disminuir el tamaño de la fuente en móvil */
+  }

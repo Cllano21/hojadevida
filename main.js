@@ -1,21 +1,17 @@
-const carrusel = document.querySelector(".carrusel-items");
+// script.js
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene el comportamiento por defecto del enlace
+        const targetId = this.getAttribute('data-target'); // Obtiene el ID del contenedor
+        const targetElement = document.getElementById(targetId); // Selecciona el contenedor
 
-let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
-let intervalo = null;
-let step = 1;
-let startX;
-let scrollLeft;
-
-// Iniciar el auto-desplazamiento
-const start = () => {
-    intervalo = setInterval(function () {
-        carrusel.scrollLeft += step;
-        if (carrusel.scrollLeft >= maxScrollLeft || carrusel.scrollLeft <= 0) {
-            step = -step; // Invertir dirección
-        }
-    }, 10);
-};
-
-
-
-start();
+        // Desplazamiento manual
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        
+        // Desplazamiento suave
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+});

@@ -6,32 +6,36 @@
     <title>César Andrés Llano Iza</title>
     <link rel="icon" href="./Artboard 112@4x.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
   <header>
     <div class="logo2">
      <img src="./Artboard 112@4x.png">
-     
     </div>
     <nav>
-         <a href="" class="nav-link">Inicio</a>
-         <a href="" class="nav-link">Perfil</a>
-         <a href="" class="nav-link">Estudios</a>
-         <a href="" class="nav-link">Experiencia</a>
-                </nav>
-</header>
-<div class="contenedor0">
+      <a href="#" class="nav-link" data-target="Inicio">Inicio</a>
+      <a href="#" class="nav-link" data-target="perfil">Perfil</a>
+      <a href="#" class="nav-link" data-target="formacion">Educación</a>
+      <a href="#" class="nav-link" data-target="Experiencia">Experiencia</a>
+      <a href="#" class="nav-link" data-target="Contacto">Contacto</a>
+    </nav>
+  </header>
+<div class="seccion" id="Inicio">   
+ <div class="contenedor0">
   <img src="./Artboard 111@3x.png" alt="">
   <h2>César Andrés Llano Iza</h2>
 </div>
+</div>
+<div class="seccion" id="perfil">   
 <div class="contenedor">
        <div class="parrafo">
     
    <h3>Perfil</h3>
    <p >  Sociólogo y Magister en Economía. Experto en planificación, procesos y seguimiento de proyectos, así como en análisis de datos. He adquirido conocimientos en las principales corrientes teóricas para el análisis y la caracterización social, cultural y económica. Además, he desarrollado sólidas habilidades de liderazgo y trabajo en equipo.</p></div>
 </div>
-   <div class="contenedor1">
+</div>
+<div class="seccion" id="formacion">   
+<div class="contenedor1">
     <h3>Formación académica</h3>
     <div class="parrafo1">
     
@@ -40,10 +44,12 @@
       Tesis: Diferencias salariales por género en el Ecuador periodo 2007- 2016<br><br>
       <strong>Sociología</strong><br>
       Centro Universitario: Pontificia Universidad Católica del Ecuador<br>
-Tesis: Lo político en la comunidad andina Caso de estudio Comuna Andina Cocotog<br>
+Tesis: Lo político en la comunidad andina Caso de estudio Comuna Andina Cocotog<br></p>
       </div>
     </div>
-    <div class="contenedor2">
+  </div>
+<div class="seccion" id="Experiencia">  
+  <div class="contenedor2">
       <div class="parrafo21">
       <h3>Experiencia laboral</h3>
       <p ><strong>Especialista ecónomico mayo agosto 2024 </strong><br>
@@ -59,18 +65,25 @@ Informe final del Censo Textil del cantón Antonio Ante 2024 con análisis de pr
     Actividades: <br>
     Levantamiento de metas, indicadores processo para la institución <br>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZdFS2WfZ5mv_e_N83CI3NIg74ar31hV4X5dYpkUb7FjQANA/viewform?usp=sf_link" target="_blank">Clickea para revisar el cuestionario</a><br>
-Panel de información geográfico sobre pueblos y nacionalidades <br>
+Panel gerencial de información geográfica sobre pueblos y nacionalidades <br>
 <iframe width="300" height="200" src="https://app.powerbi.com/view?r=eyJrIjoiOTZkZmM4ODYtNzUxYy00MjI4LThmNjktYzJiYzUzNjVkOGUzIiwidCI6ImM0NzUzZDdiLWY2MzgtNDczZi04NTgzLTA4N2Y4NWE3Yjc1ZCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
 </div>
     <a href="https://docs.google.com/forms/d/1d8uUp38bultiqvSaYeABL8R4zEl99idCjW8Jt51RN70/edit#responses" target="_blank">Clickea para revisar la base de datos</a><br>
 
-        <strong>Sociología</strong><br>
-        Centro Universitario: Pontificia Universidad Católica del Ecuador<br>
-  Tesis: Lo político en la comunidad andina Caso de estudio Comuna Andina Cocotog<br>
+        <strong>Ministerio del Ambiente, Agua y Transición Ecológica </strong><br>
+        Especialista en proyecto Fomento a la Gestión del Agua Potable, Saneamiento, Riego y Drenaje<br>
+  Levantamiento de procesos de todos los componentes del proyecto ajustado a metas y presupuesto<br>
+  <p class="frase">Mira la imagen y clikea sobre la imagen para que te descargues el archivo</p>
+  <a href="./PEP FOGAPRYD Jul2023 V7 (1).mpp" target="_blank">
+    <img src="./Captura de pantalla 2024-09-27 121734.png" alt="Clikea y revisa el levantamiento de procesos" style="width:300px;height:auto;">
+    
+</a>
         </div>
       </div>
       
   <footer>
+    
+    <div class="seccion" id="Contacto">   
     <div class="footer-container">
              <div class="footer-column">
             <h3>Contacto</h3>
@@ -86,6 +99,18 @@ Panel de información geográfico sobre pueblos y nacionalidades <br>
         <p>© 2024 desarrollado por: <span class="texto-propaganda">César Andrés Llano Iza</span>. Todos los derechos reservados.</p>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.nav-link').on('click', function(e) {
+            e.preventDefault();
+            const targetId = $(this).data('target');
+            $('html, body').animate({
+                scrollTop: $('#' + targetId).offset().top
+            }, 500); // Duración del desplazamiento en milisegundos
+        });
+    });
+</script>
 </body>
  
 
