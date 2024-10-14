@@ -1,33 +1,34 @@
-// script.js
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Previene el comportamiento por defecto del enlace
-        const targetId = this.getAttribute('data-target'); // Obtiene el ID del contenedor
-        const targetElement = document.getElementById(targetId); // Selecciona el contenedor
+document.getElementById('generate-pdf').addEventListener('click', function () {
+    const { jsPDF } = window.jspdf;
 
-        // Desplazamiento manual
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-        
-        // Desplazamiento suave
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
+    // Crear el documento con formato A4
+    const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm', // Utiliza milímetros
+        format: 'a4' // Establece el tamaño a A4
+    });
+
+    // Captura el contenido HTML y lo convierte en texto seleccionable
+    doc.html(document.getElementById('content'), {
+        callback: function (pdf) {
+            pdf.save('César Andrés Llano Iza.pdf');
+        },
+        x: 5,  // Margen izquierdo
+        y: 5,  // Margen superior
+        html2canvas: {
+            scale: 0.25, // Escala el contenido para que se ajuste mejor a la página A4
+            useCORS: true // Evita problemas de CORS si se cargan imágenes externas
+        }
     });
 });
 
-const hiddenImageSrc = './img4.png'; // Cambia esto a la ruta correcta
-const img = new Image();
-img.src = hiddenImageSrc;
+let visitas = localStorage.getItem('contadorVisitas') ? parseInt(localStorage.getItem('contadorVisitas')) : 0;
 
-img.onload = function() {
-    // Ahora puedes agregar la imagen oculta al PDF
-    html2pdf().from(content).set(options).toPdf().get('pdf').then((pdf) => {
-        pdf.addImage(img, 'PNG', 15, 170, 180, 160); // Ajusta la posición y tamaño según necesites
-        pdf.save('pagina-con-imagen.pdf');
-    });
-};
+// Incrementar el contador
+visitas += 1;
 
-if (img.complete) {
-    img.onload(); // Llama la función si la imagen ya está cargada
-}
+// Guardar el nuevo número de visitas en el almacenamiento local
+localStorage.setItem('contadorVisitas', visitas);
+
+// Mostrar el número de visitas en la página
+document.getElementById('visitas').innerText = visitas;

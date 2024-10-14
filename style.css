@@ -158,6 +158,7 @@ footer {
   padding: 10px; /* Espaciado alrededor */
   box-sizing: border-box;
   margin-bottom: 5px; 
+  color: rgb(60, 27, 146);
 }
 
 .contenedor1 .parrafo1 {
@@ -197,11 +198,18 @@ footer {
   margin-bottom: 5px; 
 }
 
-.contenedor2 .parrafo21,
-.contenedor2 .parrafo22,
-.contenedor2 .parrafo23, {
+.contenedor2 .parrafo21 {
   width: 100%; /* Ancho completo */
   text-align: left;
+}
+.contenedor2 .parrafo22 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+}
+.contenedor2 .parrafo23 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+  color: rgb(60, 27, 146);
 }
 
 .contenedor2 h3,
@@ -210,7 +218,9 @@ footer {
   font-size: 16px; /* Ajuste del tamaño de la fuente */
   width: 100%;
   margin: 5px 0; /* Espaciado vertical */
+  text-align: left;
 }
+
 @media (max-width: 500px) {
   .contenedor2 h3 {
     font-size: 18px; /* Disminuir el tamaño de la fuente en móvil */
