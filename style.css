@@ -129,7 +129,7 @@ nav a:hover {
 
 footer {
   background-color: #4f91ce;
-  padding: 1em 0;
+  padding: 0px;
   color: rgb(196, 199, 200);
   text-align: center; /* Centrar el texto del pie de página */
 }
@@ -211,7 +211,16 @@ footer {
   text-align: left;
   color: rgb(60, 27, 146);
 }
-
+.contenedor2 .parrafo24 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+  color: rgb(60, 27, 146);
+}
+.contenedor2 .parrafo25 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+  color: rgb(60, 27, 146);
+}
 .contenedor2 h3,
 .contenedor2 p {
   color: rgb(60, 27, 146);
@@ -227,5 +236,4 @@ footer {
   }
   .contenedor2 p {
     font-size: 16px; /* Disminuir el tamaño de la fuente en móvil */
-  }
-
+  }}
