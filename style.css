@@ -1,0 +1,239 @@
+body{
+  font-family: sans-serif;
+}
+a { 
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-family: sans-serif;
+  padding-right: 0;
+}
+a:hover {
+  text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+header {
+  display: flex;
+  height: auto;
+  width: 100%;
+  background-color: rgb(24, 141, 190);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Ajuste de padding */
+  box-sizing: border-box;
+}
+
+.logo2 {
+  display: flex;
+  height: auto; /* Permitir que el logo se ajuste */
+  align-items: center;
+  color: white;
+}
+
+.logo2 img {
+  height: 20px; /* Ajustado para que no sea tan grande */
+  width: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+nav {
+  margin-right: 20px; /* Reducido para móviles */
+}
+
+nav a {
+  padding: 5px 10px; /* Espaciado alrededor de los enlaces */
+}
+
+nav a:hover {
+  background-color: beige;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start; /* Alineación a la izquierda */
+  }
+  nav {
+    margin-right: 0;
+    padding: 10px 0;
+    width: 100%; /* Para ocupar todo el ancho */
+  }
+  nav a {
+    display: block; /* Cada enlace ocupa una línea */
+    padding: 10px; /* Espacio adicional */
+  }
+}
+
+.contenedor0 {
+  background-color: rgb(147, 165, 200);
+  display: flex;
+  flex-direction: column; /* Cambiado para diseño móvil */
+  align-items: center; /* Centramos los elementos */
+  width: 100%;
+  padding: 10px; /* Espaciado alrededor */
+  box-sizing: border-box;
+  margin-bottom: 5px; 
+}
+
+.contenedor0 img {
+  width: 20%; /* Ajuste para imágenes */
+  height: auto;
+  margin-bottom: 1px; /* Espacio entre la imagen y el texto */
+  border-radius: 8px;
+}
+.contenedor0 h2 {
+  color: rgb(60, 27, 146);
+  margin: 5px 0;
+  font-size: 26px; /* Ajuste del tamaño de la fuente */
+}
+.contenedor {
+  background-color: rgb(147, 165, 200);
+  display: flex;
+  flex-direction: column; /* Cambiado para diseño móvil */
+  align-items: center; /* Centramos los elementos */
+  width: 100%;
+  padding: 10px; /* Espaciado alrededor */
+  box-sizing: border-box;
+  margin-bottom: 5px; 
+}
+
+.contenedor img {
+  width: 10%; /* Ajuste para imágenes */
+  height: auto;
+  margin-bottom: 1px; /* Espacio entre la imagen y el texto */
+  border-radius: 8px;
+}
+
+.contenedor .parrafo {
+  width: 100%; /* Ancho completo */
+  text-align: justify;
+}
+
+.contenedor h2 {
+  color: rgb(255, 255, 255);
+  margin: 5px 0;
+  font-size: 20px; /* Ajuste del tamaño de la fuente */
+}
+.contenedor h3{
+  color: rgb(60, 27, 146);
+  margin: 5px 0;
+  font-size: 18px; /* Ajuste del tamaño de la fuente */
+}
+.contenedor p {
+  color: rgb(60, 27, 146);
+  margin: 5px 0;
+  font-size: 16px; /* Ajuste del tamaño de la fuente */
+}
+
+footer {
+  background-color: #4f91ce;
+  padding: 0px;
+  color: rgb(196, 199, 200);
+  text-align: center; /* Centrar el texto del pie de página */
+}
+
+.texto-propaganda {
+  color: rgb(27, 32, 163);
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 500px) {
+  .contenedor0 h2 {
+    font-size: 18px; /* Disminuir el tamaño de la fuente en móvil */
+  }
+  .contenedor p,
+  .contenedor ul {
+    font-size: 16px; /* Disminuir el tamaño de la fuente en móvil */
+  }
+}
+
+.contenedor1 {
+  background-color: rgb(244, 247, 251);
+  display: flex;
+  flex-direction: column; /* Cambiado para diseño móvil */
+  align-items: center; /* Centramos los elementos */
+  width: 100%;
+  padding: 10px; /* Espaciado alrededor */
+  box-sizing: border-box;
+  margin-bottom: 5px; 
+  color: rgb(60, 27, 146);
+}
+
+.contenedor1 .parrafo1 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+}
+
+.contenedor1 h3 {
+  color: rgb(60, 27, 146);
+  font-size: 18p x; /* Ajuste del tamaño de la fuente */
+  width: 100%;
+  margin: 5px 0; /* Espaciado vertical */
+}
+.contenedor1 p {
+  color: rgb(60, 27, 146);
+  font-size: 16px; /* Ajuste del tamaño de la fuente */
+  width: 100%;
+  margin: 5px 0; /* Espaciado vertical */
+}
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 500px) {
+  .contenedor1 h3 {
+    font-size: 18px; /* Disminuir el tamaño de la fuente en móvil */
+  }
+  .contenedor1 p {
+    font-size: 16px; /* Disminuir el tamaño de la fuente en móvil */
+  }
+}
+.contenedor2 {
+  background-color: rgb(147, 165, 200);
+  display: flex;
+  flex-direction: column; /* Cambiado para diseño móvil */
+  align-items: center; /* Centramos los elementos */
+  width: 100%;
+  padding: 10px; /* Espaciado alrededor */
+  box-sizing: border-box;
+  margin-bottom: 5px; 
+}
+
+.contenedor2 .parrafo21 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+}
+.contenedor2 .parrafo22 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+}
+.contenedor2 .parrafo23 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+  color: rgb(60, 27, 146);
+}
+.contenedor2 .parrafo24 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+  color: rgb(60, 27, 146);
+}
+.contenedor2 .parrafo25 {
+  width: 100%; /* Ancho completo */
+  text-align: left;
+  color: rgb(60, 27, 146);
+}
+.contenedor2 h3,
+.contenedor2 p {
+  color: rgb(60, 27, 146);
+  font-size: 16px; /* Ajuste del tamaño de la fuente */
+  width: 100%;
+  margin: 5px 0; /* Espaciado vertical */
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .contenedor2 h3 {
+    font-size: 18px; /* Disminuir el tamaño de la fuente en móvil */
+  }
+  .contenedor2 p {
+    font-size: 16px; /* Disminuir el tamaño de la fuente en móvil */
+  }}
