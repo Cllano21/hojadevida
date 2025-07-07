@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <!-- Cargar html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Font Awesome para iconos adicionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ESTILOS GENERALES */
         * {
@@ -75,18 +77,34 @@
         nav {
             margin-right: 20px;
         }
-        
+        .nav-img-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
         nav a {
             padding: 8px 12px;
             margin: 0 3px;
             border-radius: 4px;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
         }
         
         nav a:hover {
             background-color: rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
+        }
+        
+        /* Nuevo estilo para el icono de WhatsApp */
+        .nav-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 18px;
+            filter: brightness(0) invert(1); /* Hace el icono blanco */
         }
         
         /* CONTENIDO PRINCIPAL */
@@ -188,6 +206,23 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         
+        /* Nuevos estilos para videos */
+        .video-container {
+            width: 100%;
+            margin: 15px 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
         /* FOOTER */
         footer {
             background-color: #4f91ce;
@@ -269,8 +304,15 @@
                 padding-top: 110px; /* Más espacio para header en móvil */
             }
             
-            iframe {
+            iframe, .video-container {
                 height: 200px;
+            }
+            
+            /* Ajustes para iconos en móvil */
+            .nav-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
             }
         }
         
@@ -287,6 +329,13 @@
             .contenedor0 h2 {
                 font-size: 20px;
             }
+            
+            /* Iconos más pequeños en móvil */
+            .nav-icon {
+                width: 14px;
+                height: 14px;
+                margin-right: 3px;
+            }
         }
     </style>
 </head>
@@ -296,11 +345,22 @@
             <img src="./Artboard 112@4x.png" alt="Logo">
         </div>
         <nav>
-            <a href="#" class="nav-link" data-target="Inicio">Inicio</a>
-            <a href="#" class="nav-link" data-target="perfil">Perfil</a>
-            <a href="#" class="nav-link" data-target="formacion">Educación</a>
-            <a href="#" class="nav-link" data-target="Experiencia">Experiencia</a>
-            <a href="#" class="nav-link" data-target="Contacto">Contacto</a>
+            <!-- Icono añadido al enlace "Inicio" -->
+            <a href="#" class="nav-link" data-target="Inicio">
+                <i class="fas fa-circle nav-icon"></i> Inicio
+            </a>
+            <a href="#" class="nav-link" data-target="perfil">
+                <i class="fas fa-user nav-icon"></i> Perfil
+            </a>
+            <a href="#" class="nav-link" data-target="formacion">
+                <i class="fas fa-graduation-cap nav-icon"></i> Educación
+            </a>
+            <a href="#" class="nav-link" data-target="Experiencia">
+                <i class="fas fa-briefcase nav-icon"></i> Experiencia
+            </a>
+            <a href="#" class="nav-link" data-target="Contacto">
+                <i class="fas fa-envelope nav-icon"></i> Contacto
+            </a>
         </nav>
     </header>
     
@@ -326,7 +386,7 @@
                 <h3>Formación académica</h3>
                 <div class="parrafo1">
                     <p><strong>Maestría en Economía</strong><br>
-                    Centro Universitario: Facultad Latinoamérica de Ciencias Sociales FLACSO<br>
+                    Centro Universitario: Facultad Latinoamericana de Ciencias Sociales FLACSO<br>
                     Tesis: Diferencias salariales por género en el Ecuador periodo 2007- 2016<br>
                     Materias de especialidad: Economía de la innovación<br><br>
                     <strong>Sociología</strong><br>
@@ -345,13 +405,28 @@
                     Actividades: <br>
                     Dashbord panel de visualización. Análisis gráfico de las utilidades en el sector automotriz ensamblador de Ecuador, implementado en un desarrollo web de datos dinámicos que integra código Python, un servidor SQL en la nube y un entorno configurado mediante Dockerfile.<br>
                     <iframe id="data-iframe1" src="https://automotriz.onrender.com/" frameborder="0" allowFullScreen="true"></iframe><br>
-                    <iframe id="data-iframe1" src="video.html" width="640" height="360"></iframe>
+                    
+                    <!-- Video silenciado y autoplay -->
+                    <div class="video-container">
+                        <video controls muted autoplay playsinline>
+                            <source src="video/Diseño sin título (2).mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                    </div>
+                    
                     <a href="https://automotriz.onrender.com/" target="_blank" style="color: grey; text-decoration: none;">Clickea para abrir el dashbord en nueva pestaña</a><br>
                 </div>
                 <div class="parrafo16">
                     Actividades: <br>
                     Ranking anual dinámico del Top 20 Empresas con mayores ingresos desde 2008 a 2023<br>
-                    <iframe id="data-iframe1" src="video1.html" width="640" height="360"></iframe>
+                    
+                    <!-- Video silenciado y autoplay -->
+                    <div class="video-container">
+                        <video controls muted autoplay playsinline>
+                            <source src="video/GSIS.mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                    </div>
                 </div>
                 <div class="parrafo17">
                     Actividades: <br>
